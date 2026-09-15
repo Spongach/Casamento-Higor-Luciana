@@ -137,7 +137,7 @@
     <!-- INFORMAÇÕES (traje, fotos etc.) -->
     <section class="section info reveal">
       <div class="info__item">
-        <p>Nossa cerimônia terá início pontualmente às 16h30. Por isso pedimos que acomodem-se com antecedência, chegando por volta das 16h.</p>
+        <p>Nossa cerimônia terá início pontualmente às 09h:00. Por isso pedimos que acomodem-se com antecedência, chegando por volta das 08h:30.</p>
       </div>
       <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
       <div class="info__item">
@@ -153,32 +153,82 @@
     <!-- LISTA DE PRESENTES -->
     <section id="gifts" class="section gifts reveal">
       <h2 class="section__title">Lista de Presentes</h2>
-      <div class="gifts__grid">
-        <!-- TROCAR: itens reais da lista -->
-        <article class="gift-card">
-          <div class="gift-card__img-placeholder">Foto</div>
-          <p class="gift-card__name">Item exemplo 1</p>
-          <p class="gift-card__price">R$ 000,00</p>
-          <button class="gift-card__btn" type="button">Presentear</button>
-        </article>
-        <article class="gift-card">
-          <div class="gift-card__img-placeholder">Foto</div>
-          <p class="gift-card__name">Item exemplo 2</p>
-          <p class="gift-card__price">R$ 000,00</p>
-          <button class="gift-card__btn" type="button">Presentear</button>
-        </article>
-        <article class="gift-card">
-          <div class="gift-card__img-placeholder">Foto</div>
-          <p class="gift-card__name">Item exemplo 3</p>
-          <p class="gift-card__price">R$ 000,00</p>
-          <button class="gift-card__btn" type="button">Presentear</button>
-        </article>
+      <p class="gifts__intro">Escolha um mimo especial pra gente. Ao clicar, aparece o QR Code e a chave Pix pra presentear.</p>
+
+      <div class="gifts__category">
+        <h3 class="gifts__category-title">Pequenos Gestos, Grandes Memórias</h3>
+        <div class="gifts__grid">
+          <button class="gift-card" type="button" data-name="Uber de emergência quando as pernas falharem" data-price="R$ 40,00">
+            <span class="gift-card__name">Uber de emergência quando as pernas falharem</span>
+            <span class="gift-card__price">R$ 40,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Aluguel de bicicleta para andar no parque no fim da tarde" data-price="R$ 45,00">
+            <span class="gift-card__name">Aluguel de bicicleta para andar no parque no fim da tarde</span>
+            <span class="gift-card__price">R$ 45,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Café da tarde em uma cafeteria aconchegante" data-price="R$ 50,00">
+            <span class="gift-card__name">Café da tarde em uma cafeteria aconchegante</span>
+            <span class="gift-card__price">R$ 50,00</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="gifts__category">
+        <h3 class="gifts__category-title">Abençoando Nossos Passeios</h3>
+        <div class="gifts__grid">
+          <button class="gift-card" type="button" data-name="Rodízio de pizza no primeiro dia da viagem" data-price="R$ 80,00">
+            <span class="gift-card__name">Rodízio de pizza no primeiro dia da viagem</span>
+            <span class="gift-card__price">R$ 80,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Taxa de coragem para a noiva/noivo fazer tirolesa" data-price="R$ 130,00">
+            <span class="gift-card__name">Taxa de coragem para a noiva/noivo fazer tirolesa</span>
+            <span class="gift-card__price">R$ 130,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Sessão de massagem rápida para pés e costas cansadas" data-price="R$ 120,00">
+            <span class="gift-card__name">Sessão de massagem rápida para pés e costas cansadas</span>
+            <span class="gift-card__price">R$ 120,00</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="gifts__category">
+        <h3 class="gifts__category-title">Experiências Inesquecíveis</h3>
+        <div class="gifts__grid">
+          <button class="gift-card" type="button" data-name="Jantar romântico com menu degustação de 5 passos" data-price="R$ 300,00">
+            <span class="gift-card__name">Jantar romântico com menu degustação de 5 passos</span>
+            <span class="gift-card__price">R$ 300,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Upgrade no quarto para a suíte master com banheira" data-price="R$ 350,00">
+            <span class="gift-card__name">Upgrade no quarto para a suíte master com banheira</span>
+            <span class="gift-card__price">R$ 350,00</span>
+          </button>
+          <button class="gift-card" type="button" data-name="Resgate de emergência se o casal esquecer a carteira no restaurante" data-price="R$ 500,00">
+            <span class="gift-card__name">Resgate de emergência se o casal esquecer a carteira no restaurante</span>
+            <span class="gift-card__price">R$ 500,00</span>
+          </button>
+        </div>
       </div>
     </section>
 
+    <!-- MODAL DE PAGAMENTO (QR CODE + PIX) -->
+    <div id="gift-modal" class="gift-modal" hidden>
+      <div class="gift-modal__backdrop" data-close></div>
+      <div class="gift-modal__box" role="dialog" aria-modal="true" aria-labelledby="gift-modal-name">
+        <button class="gift-modal__close" type="button" data-close aria-label="Fechar">&times;</button>
+        <p class="gift-modal__name" id="gift-modal-name"></p>
+        <p class="gift-modal__price" id="gift-modal-price"></p>
+        <img src="assets/pix-qrcode.png" alt="QR Code Pix" class="gift-modal__qr">
+        <p class="gift-modal__pix-label">ou copie a chave Pix</p>
+        <div class="gift-modal__pix-row">
+          <span id="gift-modal-pix">62 99237-3970</span>
+          <button class="gift-modal__copy" type="button" id="gift-modal-copy">Copiar</button>
+        </div>
+      </div>
+    </div>
+
     <!-- MANUAL DOS CONVIDADOS -->
     <section id="guide" class="section guide reveal">
-      <!-- <div class="guide__monogram">H&amp;L</div> -->
+      <div class="guide__monogram">H&amp;L</div>
       <h2 class="section__title">Manual do Convidado</h2>
       <p class="guide__intro">Estamos muito felizes em compartilhar esse dia tão especial com você! Preparamos este manual com carinho para que você possa aproveitar cada momento conosco.</p>
 
@@ -209,7 +259,7 @@
       <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
 
       <div class="guide__item">
-        <p><strong>Confirmação de presença &amp; lista de presentes.</strong> As informações completas para o RSVP e o acesso à lista de presentes estão disponíveis direto neste convite. Por favor, não se esqueça de confirmar sua presença com antecedência!</p>
+        <p><strong>Confirmação de presença &amp; lista de presentes.</strong> As informações completas para a confirmação de presença e o acesso à lista de presentes estão disponíveis direto neste convite. Por favor, não se esqueça de confirmar sua presença com antecedência!</p>
       </div>
 
       <p class="guide__signature">Com carinho,<br><strong>Higor &amp; Luciana</strong></p>

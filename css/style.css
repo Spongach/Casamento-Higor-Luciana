@@ -115,6 +115,21 @@ a { color: inherit; text-decoration: none; }
   background: var(--cream);
 }
 
+@media (max-width: 700px) {
+  .cover__bg-img {
+    object-fit: cover;
+  }
+}
+
+/* No celular (tela alta/estreita) a imagem é larga demais pra caber sem sobrar espaço vazio.
+   Preenche a tela toda cortando só as bordas laterais (que são só fundo liso, sem conteúdo). */
+@media (max-width: 700px) {
+  .cover__bg-img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
 .cover.cover--closing {
   opacity: 0;
   visibility: hidden;
@@ -453,43 +468,156 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---- Gifts ---- */
+.gifts__intro {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.gifts__category {
+  margin-bottom: 2.6rem;
+  text-align: left;
+}
+
+.gifts__category-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--olive-dark);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
 .gifts__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
 }
 
 .gift-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
   background: var(--white-ribbon);
   border: 1px solid var(--hairline);
-  padding: 0.8rem;
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-.gift-card__img-placeholder {
-  aspect-ratio: 1;
+.gift-card:hover,
+.gift-card:focus-visible {
   background: var(--cream-deep);
+  border-color: var(--olive);
+}
+
+.gift-card__name { font-size: 1.02rem; line-height: 1.4; }
+
+.gift-card__price {
+  flex-shrink: 0;
+  color: var(--olive-dark);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---- Modal Pix ---- */
+.gift-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-  margin-bottom: 0.7rem;
+  padding: 1.2rem;
 }
 
-.gift-card__name { margin: 0 0 0.3rem; font-size: 1rem; }
-.gift-card__price { margin: 0 0 0.7rem; color: var(--ink-soft); font-size: 0.9rem; }
+.gift-modal[hidden] { display: none; }
 
-.gift-card__btn {
+.gift-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(58, 49, 38, 0.55);
+}
+
+.gift-modal__box {
+  position: relative;
+  background: var(--cream);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  max-width: 340px;
   width: 100%;
+  padding: 2rem 1.6rem 1.6rem;
+  text-align: center;
+}
+
+.gift-modal__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink-soft);
+}
+
+.gift-modal__name {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+.gift-modal__price {
+  color: var(--olive-dark);
+  font-weight: 600;
+  margin: 0 0 1.2rem;
+}
+
+.gift-modal__qr {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 1.2rem;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  display: block;
+}
+
+.gift-modal__pix-label {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+
+.gift-modal__pix-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.gift-modal__pix-row span {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.gift-modal__copy {
   background: var(--olive);
   color: var(--cream);
   border: none;
-  padding: 0.55rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.03em;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
 }
 
-.gift-card__btn:hover { background: var(--olive-dark); }
+.gift-modal__copy:hover { background: var(--olive-dark); }
 
 /* ---- Guide ---- */
 .guide__monogram {

@@ -66,6 +66,44 @@ const observer = new IntersectionObserver(
 
 revealTargets.forEach((el) => observer.observe(el));
 
+// ================= MODAL DE PRESENTES (PIX) =================
+const giftModal = document.getElementById('gift-modal');
+const giftModalName = document.getElementById('gift-modal-name');
+const giftModalPrice = document.getElementById('gift-modal-price');
+const giftModalPix = document.getElementById('gift-modal-pix');
+const giftModalCopy = document.getElementById('gift-modal-copy');
+const PIX_KEY = '62 99237-3970';
+
+document.querySelectorAll('.gift-card').forEach((card) => {
+  card.addEventListener('click', () => {
+    giftModalName.textContent = card.dataset.name;
+    giftModalPrice.textContent = card.dataset.price;
+    giftModalPix.textContent = PIX_KEY;
+    giftModalCopy.textContent = 'Copiar';
+    giftModal.hidden = false;
+  });
+});
+
+function closeGiftModal() {
+  giftModal.hidden = true;
+}
+
+giftModal.querySelectorAll('[data-close]').forEach((el) => {
+  el.addEventListener('click', closeGiftModal);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !giftModal.hidden) closeGiftModal();
+});
+
+giftModalCopy.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(PIX_KEY);
+    giftModalCopy.textContent = 'Copiado!';
+  } catch (err) {
+    giftModalCopy.textContent = 'Copie manualmente';
+  }
+});
 // ================= MENU DE INTERAÇÃO (painéis) =================
 document.querySelectorAll('.menu__item[data-target]').forEach((btn) => {
   btn.addEventListener('click', () => {
