@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 320" width="80" height="320">
+  <defs>
+    <linearGradient id="goldLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a35c"/>
+      <stop offset="100%" stop-color="#8a6a34"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#goldLeaf)" stroke-width="1.4" stroke-linecap="round">
+    <path d="M40 0 C 38 60 40 260 40 320"/>
+  </g>
+  <g fill="url(#goldLeaf)" stroke="#7a5c2c" stroke-width="0.4">
+    <path d="M40 24 C 20 18 8 26 6 38 C 18 40 34 36 40 24 Z"/>
+    <path d="M40 24 C 60 18 72 26 74 38 C 62 40 46 36 40 24 Z"/>
+
+    <path d="M40 66 C 18 60 6 68 4 82 C 18 84 36 78 40 66 Z"/>
+    <path d="M40 66 C 62 60 74 68 76 82 C 62 84 44 78 40 66 Z"/>
+
+    <path d="M40 110 C 20 104 9 112 7 124 C 19 127 34 121 40 110 Z"/>
+    <path d="M40 110 C 60 104 71 112 73 124 C 61 127 46 121 40 110 Z"/>
+
+    <path d="M40 154 C 18 148 6 156 4 170 C 18 172 36 166 40 154 Z"/>
+    <path d="M40 154 C 62 148 74 156 76 170 C 62 172 44 166 40 154 Z"/>
+
+    <path d="M40 198 C 20 192 9 200 7 212 C 19 215 34 209 40 198 Z"/>
+    <path d="M40 198 C 60 192 71 200 73 212 C 61 215 46 209 40 198 Z"/>
+
+    <path d="M40 242 C 18 236 6 244 4 258 C 18 260 36 254 40 242 Z"/>
+    <path d="M40 242 C 62 236 74 244 76 258 C 62 260 44 254 40 242 Z"/>
+
+    <path d="M40 286 C 22 281 12 288 10 298 C 21 301 34 296 40 286 Z"/>
+    <path d="M40 286 C 58 281 68 288 70 298 C 59 301 46 296 40 286 Z"/>
+  </g>
+</svg>

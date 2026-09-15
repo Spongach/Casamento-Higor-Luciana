@@ -1,0 +1,3 @@
+Coloque aqui:
+- local-arte.jpg  (ilustração/pintura do local da cerimônia, usada na seção "venue-art")
+- fotos dos itens da lista de presentes, se quiser usar imagem própria em vez do placeholder

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luciana & Higor | 18.10.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== CAPA / ENVELOPE ===================== -->
+  <section id="cover" class="cover">
+    <button id="open-btn" class="cover__open-full" type="button" aria-label="Clique para abrir o convite">
+      <img src="assets/capa-envelope.png" alt="Convite de casamento Luciana e Higor — clique para abrir" class="cover__bg-img">
+    </button>
+  </section>
+
+  <!-- ===================== SITE PRINCIPAL ===================== -->
+  <main id="site" class="site" hidden>
+
+    <!-- HERO / NOMES -->
+    <section class="section hero reveal">
+      <p class="hero__verse">
+        "Para que todos vejam, e saibam, e considerem, e juntamente entendam que a mão do Senhor fez isso."<br>
+        <span class="hero__verse-ref">Isaías 41:20</span>
+      </p>
+      <img src="assets/logo-monograma.jpg" alt="Luciana & Higor" class="hero__logo">
+      <h1 class="hero__names">Luciana <span class="hero__amp">&amp;</span> Higor</h1>
+      <p class="hero__invite">
+        Com a bênção de Deus<br>convidamos você para este momento especial.
+      </p>
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="hero__label">A realizar-se</p>
+    </section>
+
+    <!-- CONTAGEM REGRESSIVA -->
+    <section class="section countdown reveal">
+      <p class="countdown__day">18</p>
+      <p class="countdown__date">OUTUBRO&nbsp;&nbsp;|&nbsp;&nbsp;2026&nbsp;&nbsp;|&nbsp;&nbsp;ÀS 09:00</p>
+
+      <div class="countdown__timer" id="countdown">
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-days">00</span>
+          <span class="countdown__label">dias</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-hours">00</span>
+          <span class="countdown__label">horas</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-minutes">00</span>
+          <span class="countdown__label">minutos</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-seconds">00</span>
+          <span class="countdown__label">segundos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTE DO LOCAL -->
+    <section class="section venue-art reveal">
+      <div class="venue-art__bleed">
+        <img src="assets/local-foto.jpg" alt="Estância dos Sonhos" class="venue-art__img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="venue-art__placeholder">
+          <span>Foto do local<br>(assets/local-foto.jpg)</span>
+        </div>
+      </div>
+      <p class="venue-art__caption">Estância dos Sonhos</p>
+    </section>
+
+    <!-- MENU DE INTERAÇÃO -->
+    <section class="section menu reveal">
+      <p class="menu__hint">Clique para interagir <span class="menu__hint-arrow">&#8594;</span></p>
+
+      <div class="menu__list">
+
+        <div class="menu__row">
+          <span class="menu__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v7M20.5 6.5h7"/><path d="M11 21 24 9l13 12"/><rect x="13" y="21" width="22" height="18"/><rect x="19" y="29" width="10" height="10"/><path d="M17 25v6M31 25v6"/></svg>
+          </span>
+          <button class="menu__item" data-target="panel-ceremonia" type="button">
+            <span>Local da cerimônia</span>
+          </button>
+        </div>
+        <div class="menu__panel" id="panel-ceremonia" hidden>
+          <p class="menu__panel-text">Estância dos Sonhos — Continuação da rua 100, zona rural do residencial Verona, Anápolis - GO</p>
+          <a class="menu__panel-btn" href="https://maps.app.goo.gl/3SDnPb8U6reEs9b68?g_st=iw" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        </div>
+
+        <div class="menu__row">
+          <span class="menu__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22 24 8l16 14"/><path d="M8 22v13M40 22v13M8 35h32"/><path d="M19 35v-9c0-3 2.2-5 5-5s5 2 5 5v9"/></svg>
+          </span>
+          <button class="menu__item" data-target="panel-evento" type="button">
+            <span>Local do evento</span>
+          </button>
+        </div>
+        <div class="menu__panel" id="panel-evento" hidden>
+          <p class="menu__panel-text">Estância dos Sonhos — Continuação da rua 100, zona rural do residencial Verona, Anápolis - GO</p>
+          <a class="menu__panel-btn" href="https://maps.app.goo.gl/3SDnPb8U6reEs9b68?g_st=iw" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        </div>
+
+        <div class="menu__row">
+          <span class="menu__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><circle cx="19.5" cy="27" r="6.2"/><circle cx="27.5" cy="27" r="6.2"/><path d="M23.5 18c1-2 4-2 4 .6 0 2.2-4 5-4 5s-4-2.8-4-5c0-2.6 3-2.6 4-.6z"/></svg>
+          </span>
+          <a class="menu__item" href="https://docs.google.com/forms/d/e/1FAIpQLSeZUal7h9QTmFfjwMSGwpfaoK2uy8v1AGHRTNPfWZLE4zcwoQ/viewform?usp=dialog" target="_blank" rel="noopener">
+            <span>Confirme a presença</span>
+          </a>
+        </div>
+
+        <div class="menu__row">
+          <span class="menu__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="20" width="28" height="17"/><path d="M10 27h28M24 20v17"/><path d="M24 20c-4-7-12-7-10-1.5 1 2.6 6 2.1 10 1.5zM24 20c4-7 12-7 10-1.5 -1 2.6-6 2.1-10 1.5z"/></svg>
+          </span>
+          <a class="menu__item" href="#gifts">
+            <span>Lista de presente</span>
+          </a>
+        </div>
+
+        <div class="menu__row">
+          <span class="menu__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 15c-4-4-13-4-16-1.5v23c3-2.5 12-2.5 16 1.5 4-4 13-4 16-1.5v-23C37 11 28 11 24 15z"/><path d="M24 15v23"/><path d="M22.4 22c.8-1.6 3.2-1.6 3.2.4 0 1.6-3.2 3.6-3.2 3.6s-3.2-2-3.2-3.6c0-2 2.4-2 3.2-.4z"/></svg>
+          </span>
+          <a class="menu__item" href="#guide">
+            <span>Manual dos convidados</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES (traje, fotos etc.) -->
+    <section class="section info reveal">
+      <div class="info__item">
+        <p>Nossa cerimônia terá início pontualmente às 16h30. Por isso pedimos que acomodem-se com antecedência, chegando por volta das 16h.</p>
+      </div>
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="info__item">
+        <p><strong>Traje:</strong> Vista-se como quiser, com elegância e conforto! Só pedimos para evitar as cores <strong>branco, marrom, marsala/vinho e bege</strong>, reservadas para a noiva e o time de padrinhos.</p>
+      </div>
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="info__item">
+        <p>Tirem muitas fotos, divirtam-se e aproveitem cada momento! Sua presença fará parte de uma das lembranças mais bonitas da nossa história.</p>
+      </div>
+      <p class="info__thanks">Este convite foi preparado com muito carinho e é destinado especialmente a você.</p>
+    </section>
+
+    <!-- LISTA DE PRESENTES -->
+    <section id="gifts" class="section gifts reveal">
+      <h2 class="section__title">Lista de Presentes</h2>
+      <div class="gifts__grid">
+        <!-- TROCAR: itens reais da lista -->
+        <article class="gift-card">
+          <div class="gift-card__img-placeholder">Foto</div>
+          <p class="gift-card__name">Item exemplo 1</p>
+          <p class="gift-card__price">R$ 000,00</p>
+          <button class="gift-card__btn" type="button">Presentear</button>
+        </article>
+        <article class="gift-card">
+          <div class="gift-card__img-placeholder">Foto</div>
+          <p class="gift-card__name">Item exemplo 2</p>
+          <p class="gift-card__price">R$ 000,00</p>
+          <button class="gift-card__btn" type="button">Presentear</button>
+        </article>
+        <article class="gift-card">
+          <div class="gift-card__img-placeholder">Foto</div>
+          <p class="gift-card__name">Item exemplo 3</p>
+          <p class="gift-card__price">R$ 000,00</p>
+          <button class="gift-card__btn" type="button">Presentear</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- MANUAL DOS CONVIDADOS -->
+    <section id="guide" class="section guide reveal">
+      <!-- <div class="guide__monogram">H&amp;L</div> -->
+      <h2 class="section__title">Manual do Convidado</h2>
+      <p class="guide__intro">Estamos muito felizes em compartilhar esse dia tão especial com você! Preparamos este manual com carinho para que você possa aproveitar cada momento conosco.</p>
+
+      <div class="guide__item">
+        <p><strong>Data e local.</strong> Horário: 09:00 (pedimos a gentileza de chegar com alguns minutos de antecedência). Local: Estância dos Sonhos — Continuação da Rua 100, Zona Rural do Residencial Verona, Anápolis - GO.</p>
+      </div>
+
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+      <div class="guide__item">
+        <div>
+          <p><strong>Traje &amp; cores.</strong> Queremos que você se sinta confortável e elegante para celebrar conosco! Pedimos que evite as seguintes cores no seu traje:</p>
+          <ul class="guide__list">
+            <li>Branco (reservado exclusivamente para a noiva)</li>
+            <li>Marrom</li>
+            <li>Marsala / Vinho</li>
+            <li>Bege</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+      <div class="guide__item">
+        <p><strong>Fotos e registros.</strong> Sinta-se à vontade para tirar fotos e gravar vídeos durante a cerimônia e a celebração! Queremos ver o casamento sob os seus olhos — registre cada detalhe e compartilhe conosco.</p>
+      </div>
+
+      <div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+      <div class="guide__item">
+        <p><strong>Confirmação de presença &amp; lista de presentes.</strong> As informações completas para o RSVP e o acesso à lista de presentes estão disponíveis direto neste convite. Por favor, não se esqueça de confirmar sua presença com antecedência!</p>
+      </div>
+
+      <p class="guide__signature">Com carinho,<br><strong>Higor &amp; Luciana</strong></p>
+    </section>
+
+    <footer class="footer">
+      <p>Higor &amp; Luciana &middot; 18.10.2026</p>
+    </footer>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
